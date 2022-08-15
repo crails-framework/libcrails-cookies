@@ -1,0 +1,3 @@
+# libcrails-cookies
+
+C++ library
