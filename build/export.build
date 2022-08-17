@@ -1,6 +1,6 @@
 $out_root/
 {
-  include libcrails-cookies/
+  include crails/
 }
 
-export $out_root/libcrails-cookies/$import.target
+export $out_root/crails/$import.target
