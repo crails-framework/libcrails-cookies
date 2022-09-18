@@ -2,7 +2,7 @@
 #include <crails/url.hpp>
 #include <crails/utils/parse_cookie_values.hpp>
 #include <boost/property_tree/json_parser.hpp>
-#include "cipher.hpp"
+#include <crails/cipher.hpp>
 
 using namespace std;
 using namespace Crails;
