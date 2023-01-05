@@ -9,14 +9,15 @@ namespace Crails
 {
   class CookieStore : public SessionStore
   {
+    SESSION_STORE_IMPLEMENTATION(CookieStore)
   public:
-    void             load(const HttpRequest&);
-    void             finalize(BuildingResponse&);
-    Data             to_data(void);
-    const Data       to_data(void) const;
+    void       load(const HttpRequest&) override;
+    void       finalize(BuildingResponse&) override;
+    Data       to_data(void) override;
+    const Data to_data(void) const override;
 
   private:
-    CookieData       cookies;
+    CookieData cookies;
   };
 }
 

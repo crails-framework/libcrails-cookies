@@ -21,3 +21,8 @@ Data CookieStore::to_data(void)
 {
   return (cookies.as_data());
 }
+
+const Data CookieStore::to_data(void) const
+{
+  return (cookies.as_data());
+}
