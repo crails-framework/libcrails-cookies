@@ -3,6 +3,11 @@
 using namespace std;
 using namespace Crails;
 
+CookieStore::CookieStore(const string& password, const string& salt) :
+  cookies(password, salt)
+{
+}
+
 void CookieStore::load(const HttpRequest& request)
 {
   auto cookie_header = request.find(HttpHeader::cookie);

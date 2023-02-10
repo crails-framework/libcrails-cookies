@@ -11,6 +11,9 @@ namespace Crails
   {
     SESSION_STORE_IMPLEMENTATION(CookieStore)
   public:
+    CookieStore(const std::string& password, const std::string& salt);
+    CookieStore() {}
+
     void       load(const HttpRequest&) override;
     void       finalize(BuildingResponse&) override;
     Data       to_data(void) override;

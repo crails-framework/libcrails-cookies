@@ -8,6 +8,18 @@ using namespace std;
 using namespace Crails;
 using namespace boost::property_tree;
 
+static const std::string empty_string;
+
+CookieData::CookieData(const string& password, const string& salt) :
+  password(password), salt(salt), use_encryption(true)
+{
+}
+
+CookieData::CookieData() :
+  password(empty_string), salt(empty_string)
+{
+}
+
 string CookieData::serialize(void)
 {
   try

@@ -8,12 +8,15 @@ namespace Crails
 {
   struct CookieData : public DataTree
   {
+    CookieData(const std::string& password, const std::string& salt);
+    CookieData();
+
     void        unserialize(const std::string&);
     std::string serialize(void);
 
-    static const std::string password;
-    static const std::string salt;
-    static const bool        use_encryption;
+    const std::string& password;
+    const std::string& salt;
+    const bool         use_encryption = false;
   };
 }
 
