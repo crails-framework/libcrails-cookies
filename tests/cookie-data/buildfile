@@ -1,0 +1,3 @@
+import libs += libcrails-cookies%lib{crails-cookies}
+
+exe{driver}: {hxx ixx txx cxx}{**} $libs testscript{**}
