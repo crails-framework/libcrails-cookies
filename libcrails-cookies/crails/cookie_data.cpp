@@ -29,7 +29,7 @@ string CookieData::serialize(void)
     Cipher cipher;
 
     if (use_encryption)
-      value        = cipher.encrypt(value, password, salt);
+      value        = cipher.encrypt(value, password);
     cookie_string += Url::encode("crails") + '=' + Url::encode(value);
     cookie_string += ";path=/";
     return (cookie_string);
@@ -51,7 +51,7 @@ void CookieData::unserialize(const string& str)
         if (use_encryption)
         {
           Cipher cipher;
-          this->from_json(cipher.decrypt(val, password, salt));
+          this->from_json(cipher.decrypt(val, password));
         }
         else
           this->from_json(val);
